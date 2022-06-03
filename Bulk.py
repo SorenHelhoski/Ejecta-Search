@@ -16,12 +16,12 @@ for line in input_file:
 name = param['NME'] # name of saved data file
 
 
-dirname = '/home/shelhosk/Desktop/Ejecta_Output/Bulk_{}'.format(name)
+dirname = 'Bulk_{}'.format(name)
 psp.mkdir_p(dirname)      
 
 print('Opening data file...')
 # open tracer file
-file0    = open('/home/shelhosk/Desktop/Ejecta_Output/{}.dat'.format(name),'r')
+file0    = open('{}.dat'.format(name),'r')
 time_0, time_f, save_step, R_p, M_p, R_imp, v_imp, coords = eval(file0.readline().replace('\n',''))
 used = Extract(file0)
 material = Extract(file0)
