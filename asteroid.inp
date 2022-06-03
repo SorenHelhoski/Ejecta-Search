@@ -1,0 +1,80 @@
+#ISINP
+------------------------------------------------------------------------
+--- this is the new input file used by iSALE versions of v7.0 and higher
+------------------------------------------------------------------------
+--- lines beginning with '-' or '!' are treated as comments and not
+--- further processed. The difference between the two comment lines
+--- is, lines starting with '-' will appear also in the backup of this
+--- input file and in the header of the jpeg-file, whereas lines
+--- beginning with '!' are completely removed from these files.
+------------------------------------------------------------------------
+--- First 8 columns are reserved for short parameter identification  ---
+--- (available abbreviations are found in the documentation)         ---
+---                                                                  ---
+--- The next 20 columns are reserved for parameter description!      ---
+---                                                                  ---
+------------------- General Model Info ---------------------------------
+VERSION               __DO NOT MODIFY__             : 4.1
+DIMENSION             dimension of input file       : 2
+PATH                  Data file path                : ./
+MODEL                 Modelname                     : Basin
+------------------- Mesh Geometry Parameters ---------------------------
+GRIDH                 horizontal cells              : 0           : 100         : 50
+GRIDV                 vertical cells                : 16          : 65          : 3
+GRIDEXT               ext. factor                   : 1.05D0
+GRIDSPC               grid spacing                  : 10000.0
+CYL                   Cylind. geometry              : 1.0D0
+GRIDSPCM              max. grid spacing             : 5.0D3
+------------------- Global Setup Parameters ----------------------------
+S_TYPE                setup type                    : DEFAULT
+ALE_MODE              ALE modus                     : EULER
+T_SURF                Surface temp                  : 273.D0
+DTDZSURF              Temp. grad. surf.             : 10.D-3
+D_LITH                Lithosp. thickness            : 144.35D3
+R_PLANET              Planet radius                 : 1.750D6
+ROCUTOFF              Density cutoff                : 300.D0
+GRAV_V                gravity                       : -1.63D0
+GRAD_TYPE             gradient type                 : DEFAULT
+GRAD_DIM              gradient dimension            : 2
+------------------- Projectile Parameters ------------------------------
+OBJNUM                number of proj.               : 1
+OBJRESH               CPPR horizontal               : 5
+OBJVEL                object velocity               : -12000.0
+OBJMAT                object material               : mantle_
+OBJTYPE               object type                   : SPHEROID
+OBJTPROF              object temp prof              : CONST
+------------------- Target Parameters ----------------------------------
+LAYNUM                number of layers              : 2
+LAYPOS                layer position                : 47          : 50
+LAYMAT                layer material                : mantle_     : crust__
+LAYTPROF              layer therm. prof             : USER        : USER
+------------------- Time Parameters ------------------------------------
+DT                    initial time increment        : 1.0D-1
+DTMAX                 maximum timestep              : 5.0D-1
+TEND                  end time                      : 2
+DTSAVE                save interval                 : 1
+DUMP                  restart file                  : NONE
+TLIM                  wall time                     : 1.D32
+------------------- Boundary Conditions --------------------------------
+BND_L                 left                          : FREESLIP
+BND_R                 right                         : FREESLIP
+BND_B                 bottom                        : NOSLIP
+BND_T                 top                           : OUTFLOW
+------------------- Numerical Stability Parameters ---------------------
+AVIS                  art. visc. linear             : 0.2D0     : 1.0D0
+ANC                   alt. node coupl               : 0.0D0
+EPS_MIN               vol. frac. cutoff             : 1.D-5
+------------------- Ac. Fluid. Parameters (read in read_material) ------
+CVIB                  c_vib                         : 0.1D0
+TOFF                  toff                          : 16.D2
+VIB_MAX               Max. vib.vel.                 : 200.D0
+-------------------- Tracer Particle Parameters ------------------------
+TR_QUAL               integration qual.             : 1
+TR_VAR                add. tracer fields            : #TrP-TrT#
+------------------- Data Saving Parameters -----------------------------
+QUALITY               Compression rate              : 80
+VARLIST               List of variables             : #Den-Pre-Tmp-Yld-Dam-Ert-Vib-YAc-PVb-VEL#
+-------------------- Control Parameters --------------------------------
+STRESS                calc_stress                   : 1
+------------------------------------------------------------------------
+<<END
