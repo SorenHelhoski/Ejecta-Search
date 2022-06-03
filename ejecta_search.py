@@ -53,7 +53,7 @@ lat_long = [param['NCO'],param['ECO']]
 ast_file = param['AST']
 datafile = param['SIM']
 
-dirname = '/home/shelhosk/Desktop/Ejecta_Output'.format(name)
+dirname = '.'.format(name)
 
 try:
     os.makedirs(dirname+'/Highlights_{}'.format(name))
