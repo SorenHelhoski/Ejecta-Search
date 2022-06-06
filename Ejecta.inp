@@ -40,8 +40,8 @@ RPL     :     Radius of Planet [km]                 : 1750
 ---------------------------------------------------------------------------
                                    File Paths
 ---------------------------------------------------------------------------
-AST     :     asteroid.inp      :      asteroid.inp
-SIM     :     jdata.dat         :      jdata.dat
+AST     :     asteroid.inp      :      ./asteroid.inp
+SIM     :     jdata.dat         :      ./jdata.dat
 
 
 
