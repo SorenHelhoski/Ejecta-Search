@@ -388,7 +388,7 @@ except:
     file0 = open('{}/{}.dat'.format(dirname,name),'r+')
     file0.truncate(0)
 
-prop = [time_0, time_f, dt, R_p, M_p, R_imp, v_imp, lat_long]
+prop = [time_0, time_f, dt, R_p, M_p, R_imp, v_imp]
 
 file0.write(str(prop)+'\n')
 
